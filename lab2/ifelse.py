@@ -38,16 +38,6 @@ elif a > b:
 else:
   print("3")
 
-# Task 5
-  
-if a == b and c == d:
-  print("Hello")
-
-# Task 6
-  
-if a == b or c == d:
-  print("Hello")
-
 # Task 7
 
 if 5 > 2:
@@ -65,7 +55,6 @@ a = 2
 b = 50
 c = 2
 if a == c or b == c:
-
   print("YES")
 
 

@@ -1,2 +1,0 @@
-# NewCodingBoard
-new repository 
