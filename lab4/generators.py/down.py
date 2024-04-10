@@ -1,20 +1,13 @@
-class CountdownIterator:
-    def __init__(self, n):
-        self.n = n
+def generate_numbers_down_to_zero(n):
+    while n >= 0:
+        yield n
+        n -= 1
 
-    def __iter__(self):
-        return self
+# Example usage:
+n = int(input("Enter a number (n): "))
 
-    def __next__(self):
-        if self.n >= 0:
-            result = self.n
-            self.n -= 1
-            return result
-        else:
-            raise StopIteration
+# Generate numbers down to 0
+numbers_generator = generate_numbers_down_to_zero(n)
 
-user_input = int(input("Enter a value: "))
-myiter = CountdownIterator(user_input)
-
-for _ in range(user_input + 1):
-    print(next(myiter))
+# Print the numbers
+print("Numbers down to 0:", list(numbers_generator))

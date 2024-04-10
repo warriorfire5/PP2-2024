@@ -1,17 +1,12 @@
-class MyNumbers:
-    def __iter__(self):
-      self.a = 0
-      return self
-    def __next__(self):
-       x = self.a
-       self.a += 2
-       return x
+def generate_even_numbers(n):
+    for i in range(0, n + 1, 2):
+        yield i
 
-myclass = MyNumbers()
-myiter = iter(myclass)
+# Get input from the console
+n = int(input("Enter a number (n): "))
 
-user_input = int(input("Enter the value that will define the top: "))
+# Generate even numbers up to n
+even_numbers_generator = generate_even_numbers(n)
 
-for i in range(0, user_input):
-   if i % 2 == 0:
-      print(next(myiter))
+# Print the even numbers in comma-separated form
+print("Even Numbers:", ", ".join(map(str, even_numbers_generator)))

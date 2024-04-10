@@ -1,7 +1,11 @@
-from datetime import date, timedelta
+import datetime
 
-today = date.today()
-five_days_ago = today - timedelta(days=5)
+# Get the current date and time
+current_date = datetime.now()
 
-print(f"Today's date: {today}")
-print(f"Five days ago: {five_days_ago}")
+# Format the date without microseconds
+formatted_date = current_date.strftime("%Y-%m-%d %H:%M:%S")
+
+# Print the result
+print("Original Date and Time:", current_date)
+print("Date and Time without Microseconds:", formatted_date)
